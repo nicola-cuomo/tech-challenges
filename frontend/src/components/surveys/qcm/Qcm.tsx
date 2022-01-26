@@ -2,6 +2,7 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Chart from "../../Chart";
+import { TitleSection } from "../../common/TitleSection";
 import Deposits from "../../Deposits";
 import Orders from "../../Orders";
 
@@ -9,6 +10,7 @@ export function Qcm() {
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       <Grid container spacing={3}>
+        <TitleSection title="QCM" />
         {/* Chart */}
         <Grid item xs={12} md={8} lg={9}>
           <Paper

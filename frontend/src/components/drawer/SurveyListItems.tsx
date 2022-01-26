@@ -17,7 +17,7 @@ export function SurveyListItems() {
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
-          <ListItemText primary="Typology" />
+          <ListItemText primary="Home" />
         </ListItem>
       </StyledLink>
       <Divider />

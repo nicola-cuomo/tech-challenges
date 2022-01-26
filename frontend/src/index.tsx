@@ -3,11 +3,16 @@ import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import Dashboard from "./components/Dashboard";
 import { BrowserRouter } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Dashboard />
+      <QueryClientProvider client={queryClient}>
+        <Dashboard />
+      </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

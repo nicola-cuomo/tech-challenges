@@ -4,7 +4,6 @@ import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import Badge from "@mui/material/Badge";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
-import MuiDrawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import {
   createTheme,
@@ -16,10 +15,11 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Copyright } from "./Copyright";
 import { drawerWidth } from "./Constants";
+import { Copyright } from "./Copyright";
 import { LeftDrawer } from "./drawer/LeftDrawer";
 import { SurveyListItems } from "./drawer/SurveyListItems";
+import { Home } from "./home/Home";
 import { Date } from "./surveys/date/Date";
 import { Numeric } from "./surveys/numeric/Numeric";
 import { Qcm } from "./surveys/qcm/Qcm";
@@ -85,7 +85,7 @@ function DashboardContent() {
                 noWrap
                 sx={{ flexGrow: 1 }}
               >
-                Surveys
+                IWD Surveys
               </Typography>
               <IconButton color="inherit" size="large">
                 <Badge badgeContent={1} color="secondary">
@@ -111,7 +111,7 @@ function DashboardContent() {
           >
             <Toolbar />
             <Routes>
-              <Route path="/" element={<Qcm />} />
+              <Route path="/" element={<Home />} />
               <Route path="qcm" element={<Qcm />} />
               <Route path="numeric" element={<Numeric />} />
               <Route path="date" element={<Date />} />
