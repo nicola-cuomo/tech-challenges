@@ -1,0 +1,11 @@
+{
+  "survey": {
+    "question": "Which museum dod you visit?",
+    "options": {
+      "Louvre": 980,
+      "Orsay": 700,
+      "Art moderne": 10,
+      "Centre Pompidou": 189
+    }
+  }
+}

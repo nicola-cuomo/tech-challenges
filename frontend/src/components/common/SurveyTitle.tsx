@@ -5,7 +5,7 @@ type Props = {
   title: string;
 };
 
-export const TitleSection: React.FC<Props> = ({ title }) => {
+export const SurveyTitle: React.FC<Props> = ({ title }) => {
   return (
     <Grid item xs={12}>
       <Typography variant="h4">{title}</Typography>

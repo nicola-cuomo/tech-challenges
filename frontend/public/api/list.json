@@ -8,15 +8,15 @@
     {
       "name": "Chartres",
       "code": "XX2",
-      "type": "Numeric"
+      "type": "NUMERIC"
     },
     {
       "name": "Melun",
       "code": "XX3",
-      "type": "Date"
+      "type": "DATE"
     },
     {
-      "name": "Naples",
+      "name": "Naples2",
       "code": "XX4",
       "type": "QCM"
     }

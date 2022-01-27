@@ -9,28 +9,19 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
-import { useQuery } from "react-query";
+import { useNavigate } from "react-router-dom";
+import { useService } from "../../hooks/useService";
 
-interface SurveyList {
-  surveys: Survey[];
-}
+export type TableSurveyProps = {
+  type?: string;
+};
 
-interface Survey {
-  name: string;
-  code: string;
-  type: "QCM" | "Date" | "Numeric";
-}
+export const SurveyTable: React.FC<TableSurveyProps> = ({ type }) => {
+  const { isLoading, isError, data, error } = useService();
+  const navigate = useNavigate();
 
-export const TableSurvey: React.FC = () => {
-  const { isLoading, isError, data, error } = useQuery<SurveyList, Error>(
-    "allSurveys",
-    async () => {
-      const response = await fetch("/api/list.json");
-      if (!response.ok) {
-        throw new Error("Error getting data");
-      }
-      return response.json();
-    }
+  const filteredData = data?.surveys.filter((survey) =>
+    type == null ? true : survey.type === type
   );
 
   if (isLoading) {
@@ -51,13 +42,14 @@ export const TableSurvey: React.FC = () => {
           </TableRow>
         </TableHead>
         <TableBody>
-          {data?.surveys.map((row) => (
+          {filteredData?.map((row) => (
             <TableRow
               key={row.code}
               sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              onClick={() => navigate(`/surveyDetail/${row.code}`)}
             >
               <TableCell component="th" scope="row">
-                {row.name}
+                <Typography>{row.name}</Typography>
               </TableCell>
               <TableCell>{row.type}</TableCell>
             </TableRow>

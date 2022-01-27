@@ -19,10 +19,8 @@ import { drawerWidth } from "./Constants";
 import { Copyright } from "./Copyright";
 import { LeftDrawer } from "./drawer/LeftDrawer";
 import { SurveyListItems } from "./drawer/SurveyListItems";
-import { Home } from "./home/Home";
-import { Date } from "./surveys/date/Date";
-import { Numeric } from "./surveys/numeric/Numeric";
-import { Qcm } from "./surveys/qcm/Qcm";
+import { SurveyDetails } from "./surveys/SurveyDetails";
+import { SurveyList } from "./surveys/SurveyList";
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -111,10 +109,13 @@ function DashboardContent() {
           >
             <Toolbar />
             <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="qcm" element={<Qcm />} />
-              <Route path="numeric" element={<Numeric />} />
-              <Route path="date" element={<Date />} />
+              <Route path="/" element={<SurveyList />} />
+              <Route path="qcm" element={<SurveyList type="QCM" />} />
+              <Route path="numeric" element={<SurveyList type="NUMERIC" />} />
+              <Route path="date" element={<SurveyList type="DATE" />} />
+              <Route path="surveyDetail">
+                <Route path=":code" element={<SurveyDetails />} />
+              </Route>
             </Routes>
             <Copyright sx={{ pt: 4, alignSelf: "flex-end" }} />
           </Box>

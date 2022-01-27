@@ -1,18 +1,21 @@
 import { Container, Grid, Paper } from "@mui/material";
-import { TitleSection } from "../common/TitleSection";
-import { TableSurvey } from "./TableSurvey";
+import { SurveyTitle } from "../common/SurveyTitle";
 
-export function Home() {
+type Props = {
+  title: string;
+};
+
+export const SurveyContainer: React.FC<Props> = ({ children, title }) => {
   return (
     <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
       <Grid container spacing={3}>
-        <TitleSection title={"All Surveys"} />
+        <SurveyTitle title={title} />
         <Grid item xs={12}>
           <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
-            <TableSurvey />
+            {children}
           </Paper>
         </Grid>
       </Grid>
     </Container>
   );
-}
+};
