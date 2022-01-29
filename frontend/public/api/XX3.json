@@ -1,11 +1,12 @@
 {
-  "survey": {
-    "question": "Which museum dod you visit?",
-    "options": {
-      "Louvre": 980,
-      "Orsay": 700,
-      "Art moderne": 10,
-      "Centre Pompidou": 189
-    }
-  }
+  "type": "QCM",
+  "title": "Favorite colour",
+  "data": [
+    { "name": "Yellow", "value": 980 },
+    { "name": "Black", "value": 700 },
+    { "name": "Red", "value": 10 },
+    { "name": "Green", "value": 1890 },
+    { "name": "Purple", "value": 250 },
+    { "name": "Magenta", "value": 730 }
+  ]
 }

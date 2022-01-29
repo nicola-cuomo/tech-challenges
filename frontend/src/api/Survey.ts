@@ -8,4 +8,10 @@ export interface Survey {
   type: SurveyType;
 }
 
+export type SurveyData = {
+  type: SurveyType;
+  title: string;
+  data: { name: string; value: number }[];
+};
+
 export type SurveyType = "QCM" | "DATE" | "NUMERIC";

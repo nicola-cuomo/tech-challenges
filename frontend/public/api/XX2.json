@@ -1,11 +1,12 @@
 {
-  "survey": {
-    "question": "Which museum dod you visit?",
-    "options": {
-      "Louvre": 980,
-      "Orsay": 700,
-      "Art moderne": 10,
-      "Centre Pompidou": 189
-    }
-  }
+  "type": "NUMERIC",
+  "title": "M^2 House evaluation Paris",
+  "data": [
+    { "name": "19°", "value": 10500 },
+    { "name": "18°", "value": 11000 },
+    { "name": "1°", "value": 14000 },
+    { "name": "5°", "value": 15000 },
+    { "name": "20°", "value": 10000 },
+    { "name": "17°", "value": 11100 }
+  ]
 }

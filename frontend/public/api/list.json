@@ -1,22 +1,22 @@
 {
   "surveys": [
     {
-      "name": "Paris",
+      "name": "Museum in Paris",
       "code": "XX1",
       "type": "QCM"
     },
     {
-      "name": "Chartres",
+      "name": "House value in Paris",
       "code": "XX2",
       "type": "NUMERIC"
     },
     {
-      "name": "Melun",
+      "name": "Date",
       "code": "XX3",
       "type": "DATE"
     },
     {
-      "name": "Naples2",
+      "name": "Favorite colour",
       "code": "XX4",
       "type": "QCM"
     }

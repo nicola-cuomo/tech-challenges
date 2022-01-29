@@ -1,8 +1,7 @@
 import { useQuery } from "react-query";
-import { SurveyList } from "../api/Survey";
 
-export function useService(queryParam = "list") {
-  const { isLoading, isError, data, error } = useQuery<SurveyList, Error>(
+export function useService<P>(queryParam = "list") {
+  const { isLoading, isError, data, error } = useQuery<P, Error>(
     queryParam,
     async () => {
       const response = await fetch(`/api/${queryParam}.json`);

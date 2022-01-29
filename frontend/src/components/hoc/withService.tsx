@@ -1,6 +1,6 @@
 import React from "react";
 import { useService } from "../../hooks/useService";
-import { TableSurveyProps } from "../common/SurveyTable";
+import { TableSurveyProps } from "../surveyList/SurveyTable";
 
 export function withService(
   TableSurvey: React.FC<TableSurveyProps>,
