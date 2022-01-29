@@ -1,6 +1,6 @@
 {
   "type": "NUMERIC",
-  "title": "M^2 House evaluation Paris",
+  "title": "Price for M^2 of house in Paris",
   "data": [
     { "name": "19°", "value": 10500 },
     { "name": "18°", "value": 11000 },

@@ -15,3 +15,40 @@ export const convertTypeIcon: Record<SurveyType, typeof SvgIcon> = {
   DATE: EventIcon,
   NUMERIC: Filter1Icon,
 };
+
+export function convertDate(date: string): string {
+  let result = new Date();
+
+  try {
+    result = new Date(date);
+  } catch (error) {}
+
+  return dateIntl(result);
+}
+
+export function dateIntl(date: Date): string {
+  let result = "";
+  try {
+    result = new Intl.DateTimeFormat("default").format(date);
+  } catch (error) {}
+  return result;
+}
+
+export function calcAverage(data: number[]): number {
+  let result = 0;
+
+  try {
+    result = Math.round(
+      data.reduce((sum, current) => {
+        const currentNumber = current;
+        if (Number.isNaN(currentNumber)) {
+          return sum;
+        }
+
+        return (sum += Number(currentNumber));
+      }, 0) / data.length
+    );
+  } catch (error) {}
+
+  return result;
+}

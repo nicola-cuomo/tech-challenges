@@ -8,11 +8,11 @@ import {
 } from "@mui/material/styles";
 import Toolbar from "@mui/material/Toolbar";
 import * as React from "react";
-import { StyleAppBar } from "./AppBar";
-import { Copyright } from "./Copyright";
-import { LeftDrawer } from "./drawer/LeftDrawer";
-import { SurveyListItems } from "./drawer/SurveyListItems";
-import { SurveyRoutes } from "./Routes";
+import { StyleAppBar } from "./layout/AppBar";
+import { Copyright } from "./layout/Copyright";
+import { LeftDrawer } from "./layout/drawer/LeftDrawer";
+import { SurveyListItems } from "./layout/drawer/SurveyListItems";
+import { SurveyRoutes } from "./layout/Routes";
 
 const mdTheme = createTheme();
 

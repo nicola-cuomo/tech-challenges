@@ -1,6 +1,6 @@
 import { Container, Grid, Paper } from "@mui/material";
 import React from "react";
-import { SurveyTitle } from "../title/SurveyTitle";
+import { SurveyTitle } from "./title/SurveyTitle";
 
 type Props = {
   title: string;

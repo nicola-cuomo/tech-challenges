@@ -5,7 +5,7 @@ import Toolbar from "@mui/material/Toolbar";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import MuiDrawer from "@mui/material/Drawer";
 import { styled } from "@mui/material/styles";
-import { drawerWidth } from "../../utils/Constants";
+import { drawerWidth } from "../../../utils/Constants";
 
 type Props = {
   open: boolean;

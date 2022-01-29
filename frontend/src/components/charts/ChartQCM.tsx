@@ -1,7 +1,7 @@
 import React from "react";
 import { Bar, BarChart, Legend, Tooltip, XAxis, YAxis } from "recharts";
 import { SurveyData } from "../../api/Survey";
-import { Title } from "../title/Title";
+import { Title } from "../common/title/Title";
 
 type Props = {
   data: SurveyData;

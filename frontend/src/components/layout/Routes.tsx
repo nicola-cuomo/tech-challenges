@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
-import { SurveyDetails } from "./surveyDetails/SurveyDetails";
-import { SurveysTable } from "./surveyList/SurveyList";
+import { NotFound } from "./NotFound";
+import { SurveyDetails } from "../surveyDetails/SurveyDetails";
+import { SurveysTable } from "../surveyList/SurveyList";
 
 export const SurveyRoutes: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ export const SurveyRoutes: React.FC = () => {
       <Route path="surveyDetail">
         <Route path=":code" element={<SurveyDetails />} />
       </Route>
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

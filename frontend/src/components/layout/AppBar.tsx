@@ -3,7 +3,7 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Badge, IconButton, Toolbar, Typography } from "@mui/material";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
-import { drawerWidth } from "../utils/Constants";
+import { drawerWidth } from "../../utils/Constants";
 
 interface AppBarProps extends MuiAppBarProps {
   open?: boolean;
@@ -62,11 +62,6 @@ export const StyleAppBar: React.FC<Props> = ({ open, toggleDrawer }) => {
         >
           IWD Surveys
         </Typography>
-        <IconButton color="inherit" size="large">
-          <Badge badgeContent={1} color="secondary">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
       </Toolbar>
     </AppBar>
   );

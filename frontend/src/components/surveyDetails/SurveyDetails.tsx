@@ -13,10 +13,6 @@ export const SurveyDetails: React.FC = () => {
 
   const { isError, isLoading, data, error } = useService<SurveyData>(code);
 
-  if (data) {
-    data.data = data?.data.sort((a, b) => (a.name < b.name ? -1 : 1));
-  }
-
   if (isLoading) {
     return (
       <SurveyContainer title={"Loading..."} content={[<CircularProgress />]} />

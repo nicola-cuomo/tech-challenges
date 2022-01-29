@@ -1,12 +1,12 @@
 {
-  "type": "QCM",
-  "title": "Favorite colour",
+  "type": "DATE",
+  "title": "List of all dates",
   "data": [
-    { "name": "Yellow", "value": 980 },
-    { "name": "Black", "value": 700 },
-    { "name": "Red", "value": 10 },
-    { "name": "Green", "value": 1890 },
-    { "name": "Purple", "value": 250 },
-    { "name": "Magenta", "value": 730 }
+    { "name": "Response 1", "value": "1980-4-17" },
+    { "name": "Response 2", "value": "1990-1-21" },
+    { "name": "Response 3", "value": "1973-7-03" },
+    { "name": "Response 4", "value": "1921-12-18" },
+    { "name": "Response 5", "value": "1944-2-01" },
+    { "name": "Response 6", "value": "2011-8-30" }
   ]
 }

@@ -11,7 +11,7 @@ export interface Survey {
 export type SurveyData = {
   type: SurveyType;
   title: string;
-  data: { name: string; value: number }[];
+  data: { name: string; value: number | string }[];
 };
 
 export type SurveyType = "QCM" | "DATE" | "NUMERIC";
