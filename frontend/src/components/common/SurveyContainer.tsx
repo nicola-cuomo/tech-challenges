@@ -11,13 +11,26 @@ export const SurveyContainer: React.FC<Props> = ({ content, title }) => {
   return (
     <Container
       maxWidth="lg"
-      sx={{ mt: 4, mb: 4, justifyContent: "space-evenly" }}
+      sx={{
+        mt: 4,
+        mb: 4,
+        justifyContent: "space-evenly",
+        position: "relative",
+        top: "50px",
+      }}
     >
       <Grid container spacing={3}>
         <SurveyTitle title={title} />
         {content.map((child) => (
-          <Grid item key={child.type} xs={"auto"} minWidth={"md"}>
-            <Paper sx={{ p: 2, display: "flex", flexDirection: "column" }}>
+          <Grid item key={child.type} xs={12} lg={6}>
+            <Paper
+              sx={{
+                p: 2,
+                display: "flex",
+                flexDirection: "column",
+                overflow: "auto",
+              }}
+            >
               {child}
             </Paper>
           </Grid>

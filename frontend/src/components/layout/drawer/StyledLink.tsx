@@ -14,7 +14,7 @@ export function StyledLink({ to, children }: Props) {
   const classes = useStyles();
 
   return (
-    <Link to={to} className={classes.surveyLink}>
+    <Link to={to} className={classes.surveyLink} style={{ color: "#1976d2" }}>
       {children}
     </Link>
   );

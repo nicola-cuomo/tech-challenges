@@ -1,5 +1,5 @@
 import React from "react";
-import { Bar, BarChart, Legend, Tooltip, XAxis, YAxis } from "recharts";
+import { Bar, BarChart, Tooltip, XAxis, YAxis } from "recharts";
 import { SurveyData } from "../../api/Survey";
 import { Title } from "../common/title/Title";
 
@@ -25,8 +25,7 @@ export const ChartQCM: React.FC<Props> = ({ data }) => {
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Legend />
-        <Bar dataKey="value" fill="#8884d8" />
+        <Bar dataKey="value" fill="#FF8633" />
       </BarChart>
     </>
   );
