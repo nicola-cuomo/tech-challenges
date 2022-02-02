@@ -4,6 +4,7 @@ import reportWebVitals from "./reportWebVitals";
 import Dashboard from "./components/Dashboard";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
+import ErrorBoundary from "./components/common/ErrorBoundary";
 
 const queryClient = new QueryClient();
 
@@ -11,7 +12,9 @@ ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <QueryClientProvider client={queryClient}>
-        <Dashboard />
+        <ErrorBoundary>
+          <Dashboard />
+        </ErrorBoundary>
       </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>,

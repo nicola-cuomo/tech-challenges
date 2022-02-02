@@ -8,7 +8,7 @@ import { SurveyDate } from "./SurveyDate";
 import { SurveyNumeric } from "./SurveyNumeric";
 import { SurveyQCM } from "./SurveyQCM";
 
-export const SurveyDetails: React.FC = () => {
+const SurveyDetails: React.FC = () => {
   const { code } = useParams();
 
   const { isError, isLoading, data, error } = useService<SurveyData>(code);
@@ -42,3 +42,5 @@ export const SurveyDetails: React.FC = () => {
       );
   }
 };
+
+export default SurveyDetails;

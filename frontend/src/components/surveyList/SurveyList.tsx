@@ -7,7 +7,7 @@ type Props = {
   type?: SurveyType;
 };
 
-export function SurveysTable({ type }: Props) {
+export default function SurveysTable({ type }: Props) {
   return (
     <SurveyContainer
       title={type != null ? convertType[type] : "All Surveys"}
