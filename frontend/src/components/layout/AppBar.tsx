@@ -1,6 +1,5 @@
 import MenuIcon from "@mui/icons-material/Menu";
-import NotificationsIcon from "@mui/icons-material/Notifications";
-import { Badge, IconButton, Toolbar, Typography } from "@mui/material";
+import { IconButton, Toolbar, Typography } from "@mui/material";
 import MuiAppBar, { AppBarProps as MuiAppBarProps } from "@mui/material/AppBar";
 import { styled } from "@mui/material/styles";
 import { drawerWidth } from "../../utils/Constants";
